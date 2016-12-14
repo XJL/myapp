@@ -7,6 +7,7 @@ import {
     Text
 } from 'react-native';
 
+import Button from '../../common/components/Button';
 import {styles} from './Home.style';
 
 class Home extends Component {
@@ -27,6 +28,7 @@ class Home extends Component {
                     Double tap R on your keyboard to reload,{'\n'}
                     Shake or press menu button for dev menu
                 </Text>
+                <Button text={"你好"} onPress={()=>{}}/>
             </View>
         );
     }
