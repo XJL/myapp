@@ -1,9 +1,16 @@
 /**
  * Created by jian on 16-12-14.
  */
-import React, {Component} from 'react'
-import {PropTypes, View, Text, TouchableOpacity, Image} from 'react-native';
-
+import React, {
+    Component,
+    PropTypes
+} from 'react'
+import {
+    View,
+    Text,
+    TouchableOpacity,
+    Image
+} from 'react-native';
 import {styles} from './Button.style';
 
 const propTypes = {
@@ -14,7 +21,6 @@ const propTypes = {
     onPress: PropTypes.func,
     outline: PropTypes.bool
 };
-
 const defaultProps = {
     enable: true,
     outline: false

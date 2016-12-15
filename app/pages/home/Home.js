@@ -1,7 +1,9 @@
 /**
  * Created by jian on 16-12-8.
  */
-import React, {Component} from 'react';
+import React, {
+    Component
+} from 'react';
 import {
     View,
     Text

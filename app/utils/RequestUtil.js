@@ -5,10 +5,17 @@
 const HOST = 'http://apis.baidu.com/';
 
 // get方法
+export async function get(urlKey, params = {}) {
+    return await request(urlKey, 'GET', params);
+}
 
 // post方法
+export async function post(urlKey, params = {}) {
+    return await request(urlKey, 'POST', params);
+}
 
 // 上传
+
 
 // 下载
 
