@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 
 import SplashScreen from './SplashScreen';
+const {WeChat} = NativeModules;
 import {styles} from './App.style';
 
 let tempNavigator;
@@ -22,6 +23,10 @@ class App extends Component {
 
     static configureScene() {
         return Navigator.SceneConfigs.PushFromRight;
+    }
+
+    async componentDidMount() {
+        await WeChat.registerApp('1234567');
     }
 
     renderScene(route, navigator) {
