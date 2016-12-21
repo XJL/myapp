@@ -8,8 +8,9 @@ import {
     Navigator,
     BackAndroid,
 } from 'react-native';
-
 import SplashScreen from './SplashScreen';
+import store from '../modules/redux/store';
+import {Provider} from 'react-redux';
 import {styles} from './App.style';
 
 let tempNavigator;
@@ -47,11 +48,13 @@ class App extends Component {
         return (
             <View style={styles.container}>
                 <StatusBar /*barStyle="light-content" */ hidden={true} translucent={true}/>
-                <Navigator
-                    initialRoute={{component: SplashScreen}}
-                    configureScene={this.configureScene}
-                    renderScene={this.renderScene}
-                />
+                <Provider store={store} key="provider">
+                    <Navigator
+                        initialRoute={{component: SplashScreen}}
+                        configureScene={this.configureScene}
+                        renderScene={this.renderScene}
+                    />
+                </Provider>
             </View>
         );
     }

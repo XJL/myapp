@@ -26,6 +26,7 @@ const defaultProps = {
     outline: false
 };
 
+// TODO: 别人的button 自己需要重新做一个
 class Button extends Component {
     constructor(props) {
         super(props);
